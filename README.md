@@ -32,7 +32,9 @@ Using the code you wrote to classify the MNIST dataset
   activation_cache – returns Z, which will be useful for the backpropagation
   note:
   Softmax can be thought of as a sigmoid for multi-class problems. The formula for softmax for each node in the output layer is as follows: 
+  
   ![image](https://github.com/Habler-code/forward_backward_propagation-/assets/69906239/8cc53ac3-c35f-4513-ab1d-67bbfc9da83b)
+
 
 ##  relu(Z)
   Input:
@@ -72,7 +74,9 @@ Using the code you wrote to classify the MNIST dataset
 ##  compute_cost(AL, Y)
   Description:
   Implement the cost function defined by equation. The requested cost function is categorical cross-entropy loss. The formula is as follows :
+  
   ![image](https://github.com/Habler-code/forward_backward_propagation-/assets/69906239/97d792c3-23b8-4506-b3b5-4c5949f23e9d)
+  
   where y_i is one for the true class (“ground-truth”) and y ̂ is the softmax-adjusted prediction.
   Input:
   AL – probability vector corresponding to your label predictions, shape (num_of_classes, number of examples)
@@ -110,7 +114,9 @@ Implements the backward propagation for the LINEAR->ACTIVATION layer. The functi
 
 Some comments:
 	The derivative of ReLU is:
+ 
  ![image](https://github.com/Habler-code/forward_backward_propagation-/assets/69906239/0b43a737-9399-4b6f-bcfa-02720150afb3)
+
 
   The derivative of the softmax function is: p_i-y_i, where p_i is the softmax-adjusted probability of the class and y_i is the “ground truth” (i.e. 1 for the real class, 0 for all others) 
   You should use the activations cache created earlier for the calculation of the activation derivative and the linear cache should be fed to the linear_backward function
